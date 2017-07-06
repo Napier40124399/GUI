@@ -1,3 +1,6 @@
+package Gui;
+
+import DataStore.Order;
 import javafx.application.Application;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
@@ -8,10 +11,9 @@ import javafx.scene.control.TreeItem;
 import javafx.scene.control.TreeView;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.StackPane;
-import javafx.scene.layout.VBox;
 import javafx.stage.Stage;
 
-public class Main extends Application
+public class OrderManager extends Application
 {
 	private Stage window;
 	private TableView<Order> table;
@@ -94,7 +96,7 @@ public class Main extends Application
 		
 		treeItem.setExpanded(true);
 		parent.getChildren().add(treeItem);
-		
+
 		return treeItem;
 	}
 	

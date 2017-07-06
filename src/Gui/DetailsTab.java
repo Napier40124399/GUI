@@ -1,3 +1,6 @@
+import Builders.ComponentBuilder;
+import Builders.DataGenerator;
+import DataStore.UsageData;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.NumberAxis;
 import javafx.scene.control.Label;
