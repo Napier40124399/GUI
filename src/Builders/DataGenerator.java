@@ -1,6 +1,10 @@
+package Builders;
+
 import java.util.ArrayList;
 import java.util.Random;
 
+import DataStore.Order;
+import DataStore.UsageData;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 

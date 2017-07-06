@@ -1,5 +1,8 @@
+package Builders;
+
 import java.util.ArrayList;
 
+import DataStore.Order;
 import javafx.scene.Node;
 import javafx.scene.chart.LineChart;
 import javafx.scene.chart.XYChart;
@@ -9,6 +12,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.control.TextField;
 import javafx.scene.control.cell.PropertyValueFactory;
 import javafx.scene.layout.HBox;
+import javafx.scene.layout.VBox;
 
 public class ComponentBuilder
 {
@@ -77,10 +81,35 @@ public class ComponentBuilder
 		}
 		chart.getData().add(series);
 	}
-
+	
+	/**
+	 * <h1>putInHBox</h1>
+	 * VBox organises this way:<p>
+	 * comp1<p>
+	 * -----<p>
+	 * comp2<p>
+	 * @see {@link Builders.ComponentBuilder#putInVBox(Node...) putInVBox}
+	 * @param components (Node) - basicaly javafx components
+	 * @return {@link HBox}
+	 */
 	public static HBox putInHBox(Node... components)
 	{
 		HBox box = new HBox();
+		box.getChildren().addAll(components);
+		return box;
+	}
+	
+	/**
+	 * <h1>putInVBox</h1>
+	 * VBox organises this way:<p>
+	 * comp1 | comp2<p>
+	 * @see {@link Builders.ComponentBuilder#putInHBox(Node...) putInHBox}
+	 * @param components (Node) - basicaly javafx components
+	 * @return {@link VBox}
+	 */
+	public static VBox putInVBox(Node... components)
+	{
+		VBox box = new VBox();
 		box.getChildren().addAll(components);
 		return box;
 	}

@@ -95,7 +95,7 @@ public class OrderManager extends Application
 		TreeItem<TableView<Order>> treeItem = new TreeItem<>(table);
 		
 		treeItem.setExpanded(true);
-		parent.getChildren().add(treeItem);
+		//parent.getChildren().add(treeItem);
 
 		return treeItem;
 	}

@@ -11,7 +11,7 @@ import javafx.scene.control.TableView;
 import javafx.scene.layout.HBox;
 import javafx.stage.Stage;
 
-public class Main2 extends Application
+public class OrderManagerGUI extends Application
 {
 	private static String[] colNames = new String[] {"name","quantity","price","cost"};
 	

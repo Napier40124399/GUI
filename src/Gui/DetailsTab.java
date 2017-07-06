@@ -1,3 +1,5 @@
+package Gui;
+
 import Builders.ComponentBuilder;
 import Builders.DataGenerator;
 import DataStore.UsageData;
