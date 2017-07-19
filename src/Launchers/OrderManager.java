@@ -1,4 +1,4 @@
-package Gui;
+package Launchers;
 
 import DataStore.Order;
 import javafx.application.Application;

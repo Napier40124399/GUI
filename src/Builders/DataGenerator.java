@@ -4,12 +4,14 @@ import java.util.ArrayList;
 import java.util.Random;
 
 import DataStore.Order;
+import DataStore.PendingOrders;
 import DataStore.UsageData;
 import javafx.collections.FXCollections;
 import javafx.collections.ObservableList;
 
 public class DataGenerator
 {
+	private static int orderId = 0;
 	public static ObservableList<Order> generateOrders()
 	{
 		ObservableList<Order> orders = FXCollections.observableArrayList();
@@ -47,5 +49,16 @@ public class DataGenerator
 		}
 
 		return array;
+	}
+	
+	public static ObservableList<PendingOrders> generatePendingOrders(int size)
+	{
+		Random r = new Random();
+		ObservableList<PendingOrders> pendingOrders = FXCollections.observableArrayList();
+		for(int i = 0; i < size; i++)
+		{
+			pendingOrders.add(new PendingOrders("N/A",r.nextInt(2000000),orderId++, orderId++,r.nextFloat()*2,"Pending"));
+		}
+		return pendingOrders;
 	}
 }

@@ -1,4 +1,4 @@
-package Gui;
+package Launchers;
 
 import Builders.ComponentBuilder;
 import DataStore.Order;
