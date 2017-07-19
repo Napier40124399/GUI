@@ -1,6 +1,7 @@
 package Gui;
 
 import Builders.ComponentBuilder;
+import DataStore.PendingOrders;
 import javafx.application.Application;
 import javafx.scene.Scene;
 import javafx.scene.control.TableView;
@@ -27,7 +28,7 @@ public class TraderGUI extends Application
     {
         window = new Stage();
         window.setTitle("TraderGUI");
-        
+	    
         
         
         scene = new Scene(ComponentBuilder.putInHBox());
@@ -37,6 +38,6 @@ public class TraderGUI extends Application
     
     private void makeIncomingTable()
     {
-    	TableView<> table = new TableView<>();
+    	TableView<PendingOrders> table = new TableView<PendingOrders>();
     }
 }
